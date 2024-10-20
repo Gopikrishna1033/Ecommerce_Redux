@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <Router>
-        <Header/>
+          <Header/>
           <Routes>
             <Route path="/" element={<ProductListing/>}></Route>
             <Route path="/product/:productId"  element={<ProductDetails/>}></Route>

@@ -1,14 +1,14 @@
 import React from 'react'
-
+import { AppBar,Toolbar,Typography } from '@mui/material'
+import {MenuIcon,IconButton} from "@mui/icons-material"
 const Header = () => {
   return (
-    <div style={{marginTop:'7%'}}>
-        <div className='ui fixed menu ' style={{height:"10vh"}}>
-            <div style={{display:"flex",alignItems:"center",marginLeft:"10%"}} >
-                <h1>Our  Shop</h1>
-            </div>
-            
-        </div>
+    <div style={{height:'17vh'}}>
+        <AppBar position="static" style={{height:"12vh"}} >
+          <Toolbar variant="dense">   
+          <Typography variant="h6" color="inherit" component="div" style={{display:"flex",alignItems:"center",marginTop:"2%"}}>Our Shop</Typography>
+        </Toolbar>
+      </AppBar>
     </div>
   )
 }

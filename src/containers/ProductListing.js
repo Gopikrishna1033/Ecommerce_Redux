@@ -23,7 +23,7 @@ const ProductListing = () => {
 
     console.log("products",products)
   return (
-    <div style={{marginLeft:"7%"}}>
+    <div>
         <ProductComponents></ProductComponents>
     </div>
   )
