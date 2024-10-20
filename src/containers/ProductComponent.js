@@ -13,8 +13,8 @@ const ProductComponents = () => {
 
     return ( 
         <div  key={id} >
-            <Link to={`/product/ ${id}`}>
-                <Card className={classes.rootCard}>
+            <Link to={`/product/ ${id}`} style={{textDecoration:"none"}}>
+                <Card style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardActionArea>
                     <CardMedia 
                     component = "img"
@@ -27,9 +27,9 @@ const ProductComponents = () => {
                     }}
                     />
                     <CardContent>
-                        <Typography variant='body2' className={classes.title}>{title}</Typography>
-                        <Typography variant='body2'className={classes.pCategory}><b> $</b> {price}</Typography>
-                        <Typography variant='body2' className={classes.pCategory}>{category}</Typography>
+                        <Typography variant='body2' style={{fontSize:"1.2rem",fontWeight:"600",fontFamily:"Open sans",lineHeight:"1.8rem",}}>{title}</Typography>
+                        <Typography variant='body2' style={{fontSize:"1rem",lineHeight:"1.8rem"}}><b> $</b> {price}</Typography>
+                        <Typography variant='body2' style={{fontSize:"1rem",lineHeight:"1.8rem"}}>{category}</Typography>
                     </CardContent>
                 </CardActionArea>
                 </Card>
@@ -39,7 +39,13 @@ const ProductComponents = () => {
     );
    });
   return (
-    <div  className={classes.dataBody}>
+    <div  
+     style={{
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(4, 1fr)',   // 4 cards per row
+        gap: '20px',                             // Gap between cards
+        padding: '20px',                         // Padding around the grid
+      }}>
         {renderlist}
     
     </div>

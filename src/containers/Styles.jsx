@@ -7,19 +7,18 @@ const useStyles = makeStyles((theme)=>({
         flexDirection: 'column'
     },
     Detailsmedia:{
-        height: '60vh',       // Fixed height for all images
-        objectFit: 'contain',   // Ensures images are cropped to fill the area while maintaining aspect ratio
-        width: '100%'
+        height: '50vh !important',       // Fixed height for all images
+        objectFit: 'contain !important',   // Ensures images are cropped to fill the area while maintaining aspect ratio
+        width: '100% !important'
     },
     title:{
-        fontSize:"1.2rem",
-        fontWeight:"600",
-        fontFamily:"Open sans",
-        lineHeight:"1.8rem"
+        fontSize:"1.2rem !important",
+        fontWeight:"600 !important",
+        lineHeight:"1.8rem !important"
     },
     pCategory:{
-        fontSize:"1rem",
-        lineHeight:"1.8rem"
+        fontSize:"1rem !important",
+        lineHeight:"1.8rem !important"
     },
     dataBody:{
         display: 'grid', 
@@ -30,7 +29,7 @@ const useStyles = makeStyles((theme)=>({
     logo:{
         display:"flex",
         alignItems:"center",
-        marginTop:"2%"
+        marginTop:"2% !important"
     }
 }));
 export default useStyles

@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <div style={{height:'17vh'}}>
         <AppBar position="static" style={{height:"12vh"}} >
-          <Toolbar variant="dense">   
-          <Typography variant="h6" color="inherit" component="div" className={classes.logo}>Our Shop</Typography>
+          <Toolbar variant="dense" >   
+          <Typography variant="h6" color="inherit"  /* style={{display:"flex",alignItems:"center",marginTop:"2%"}} */ className={classes.logo}>Our Shop</Typography>
         </Toolbar>
       </AppBar>
     </div>
