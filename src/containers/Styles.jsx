@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme)=>({
     logo:{
         display:"flex",
         alignItems:"center",
-        marginTop:"2% !important"
+        /* marginTop:"1.5% !important" */
     }
 }));
 export default useStyles
