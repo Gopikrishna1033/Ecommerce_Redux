@@ -11,7 +11,11 @@ const Header = () => {
           <Typography variant="h6" color="inherit"  /* style={{display:"flex",alignItems:"center",marginTop:"2%"}} */ className={classes.logo}>Our Shop</Typography>
           <TextField
             placeholder='Search...'
-            sx={{width:"50vw",border:"none",bgcolor:"white"}}
+            sx={{width:"50vw",border:"none",bgcolor:"white",borderRadius:"5px","& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                 border: "none",
+                  },
+                 },}}
           />
           <Typography className={classes.logo}>Login</Typography>
           </div>

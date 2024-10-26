@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme)=>({
     logo:{
         display:"flex",
         alignItems:"center",
+        cursor:'pointer'
         /* marginTop:"1.5% !important" */
     }
 }));
