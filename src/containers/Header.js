@@ -1,5 +1,6 @@
 import React from 'react'
 import { AppBar,Toolbar,Typography,TextField } from '@mui/material'
+import { Link } from 'react-router-dom'
 import useStyles from './Styles'
 const Header = () => {
   const classes = useStyles()
@@ -17,7 +18,7 @@ const Header = () => {
                   },
                  },}}
           />
-          <Typography className={classes.logo}>Login</Typography>
+          <Typography className={classes.logo}><Link to={"/login"} style={{textDecoration:"none",color:"inherit"}}>Login</Link></Typography>
           </div>
         </Toolbar>
       </AppBar>
