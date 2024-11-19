@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Button, TextField, Typography } from '@mui/material'
 const Login = () => {
+  const [username,setusername] = useState({username:"",password:""})
+  const [error,seterror] = useState("")
+  const handleUser = (event)=>{
+    const {name,value} = event.target
+    setusername({...username,[name]:value})
+    const user = /^[A-Za-z0-9!@$&*^$#()]{8,20}$/  
+    if(name==="password"){
+    if(!user.test(value)){
+      seterror("Username must be in length of 8 to 20 characters")
+    }
+    else{
+      seterror("")
+    }}
+  }
   return (
     <div>
         <Box component={"form"}
@@ -19,15 +33,25 @@ const Login = () => {
             <TextField 
             label=" Username"
             required
+            name='username'
+            onChange={handleUser}
+            value={username.username}
             fullWidth
             
             />
             <TextField
             label = "Password"
+            name = "password"
+            value={username.password}
+            onChange={handleUser}
+            helperText={error}
+            error={!!error}
             required
             fullWidth
+            
             />
             <Button variant='contained' fullWidth>Login</Button>
+            {console.log(username,"username")}
             <Typography variant='body2'>Don't have an account? Sign up</Typography>
         </Box>
     </div>
