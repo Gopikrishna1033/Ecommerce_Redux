@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { Box, Button, TextField, Typography } from '@mui/material'
+import {Link} from "react-router-dom"
+import useStyles from './styles'
+
 const Login = () => {
+  const classes = useStyles()
   const [username,setusername] = useState({username:"",password:""})
   const [error,seterror] = useState("")
   const handleUser = (event)=>{
@@ -29,7 +33,7 @@ const Login = () => {
             }}  
             autoComplete='off'
         >
-            
+                      
             <TextField 
             label=" Username"
             required
@@ -52,7 +56,7 @@ const Login = () => {
             />
             <Button variant='contained' fullWidth>Login</Button>
             {console.log(username,"username")}
-            <Typography variant='body2'>Don't have an account? Sign up</Typography>
+            <Typography variant='body2' >Don't have an account? <Link to={"/signup"} className={classes.signup}>Sign up</Link> </Typography>
         </Box>
     </div>
   )

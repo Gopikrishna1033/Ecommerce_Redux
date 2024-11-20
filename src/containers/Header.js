@@ -6,8 +6,8 @@ const Header = () => {
   const classes = useStyles()
   return (
     <div style={{height:'17vh'}}>
-        <AppBar position="static" style={{height:"12vh"}} >
-          <Toolbar variant="dense" >   
+        <AppBar position="fixed" style={{height:"12vh", }} >
+          <Toolbar  >   
             <div style={{display:"flex",justifyContent:"space-around",width:"100vw",marginTop:"1%"}}>
           <Typography variant="h6" color="inherit"  /* style={{display:"flex",alignItems:"center",marginTop:"2%"}} */ className={classes.logo}>Our Shop</Typography>
           <TextField
