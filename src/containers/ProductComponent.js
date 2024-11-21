@@ -14,7 +14,7 @@ const ProductComponents = () => {
     return ( 
         <div  key={id} >
             <Link to={`/product/ ${id}`} style={{textDecoration:"none"}}>
-                <Card style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                <Card style={{ height: '100%', display: 'flex', flexDirection: 'column' ,}}>
                 <CardActionArea>
                     <CardMedia 
                     component = "img"
