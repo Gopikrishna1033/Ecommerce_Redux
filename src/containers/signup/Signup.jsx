@@ -8,6 +8,27 @@ const Signup = () => {
     const classes = useStyles()
     const [showpassword,setshowpassword] = useState(false)
     const [password,setpassword] = useState(false)
+    const [phoneNumber,setphoneNumber] = useState("")
+    const[error,seterror]=useState("")
+    const phone=(event)=>{
+        const value  = event.target.value
+        setphoneNumber(value)
+        if(value===""){
+            seterror("")
+            return
+        }
+        const validation = /^[6-9][0-9]{9}$/
+        if(!validation.test(value)){
+            if(phoneNumber.length>10){
+            seterror("Please Check the number you have entered")
+            }else{
+            seterror("Invalid Number")
+            }
+        }else{
+            seterror("")
+        }
+    }
+
     const handlepassword = ()=>{
         setshowpassword(!showpassword)
     }
@@ -63,9 +84,12 @@ const Signup = () => {
                     />
                 </Grid>
                 <Grid size={{xs:12,md:4}} >
-                    <Typography variant='body1' className={classes.textfont}>Phone Number </Typography>
+                    <Typography variant='body1' className={classes.textfont} >Phone Number </Typography>
                     <TextField
-                        
+                    helperText={error}
+                    placeholder='Enter 10 digit mobile number '
+                        error={!!error}
+                        onChange={phone}
                         className={classes.textfeild}
                     />
                 </Grid>

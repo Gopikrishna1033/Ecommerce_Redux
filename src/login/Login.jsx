@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Box, Button, TextField, Typography } from '@mui/material'
 import {Link} from "react-router-dom"
-import bg_image from "../assets/bg_image.png"
 import useStyles from './styles'
 
 const Login = () => {
@@ -22,6 +21,7 @@ const Login = () => {
   }
   return (
     <div>
+
         <Box component={"form"}
             sx={{display:"flex",
                  flexDirection:"column",
@@ -30,11 +30,11 @@ const Login = () => {
                  margin:"auto",
                  height:"70vh",
                  justifyContent:"center",
-                 alignItems:"center"
+                 alignItems:"center",
+                 
             }}  
             autoComplete='off'
-        >
-                      
+        >  
             <TextField 
             label=" Username"
             required
